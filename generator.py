@@ -50,3 +50,10 @@ def create_table_of_contents(formatted_list:list):
 
     return file_contents
 
+def create_table_from_file(file_name:str):
+    content_list = open_csv(file_name)
+    table_of_contents_list = extract_details(content_list)
+    table_of_contents_formatted = format_time(table_of_contents_list)
+    file_contents = create_table_of_contents(table_of_contents_formatted)
+    return file_contents
+

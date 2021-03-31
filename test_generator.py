@@ -56,3 +56,9 @@ def test_create_table_of_contents():
         test_sample_contents = test_sample.read()
     
     assert generator.create_table_of_contents(input_list) == test_sample_contents
+
+def test_create_table_from_file():
+    with open("test_data/test_output.txt", mode="rt") as test_sample:
+        test_sample_contents = test_sample.read()
+
+    assert generator.create_table_from_file("test_data/exports/markers.csv") == test_sample_contents
