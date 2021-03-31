@@ -35,3 +35,18 @@ def format_time(unformatted_list:list):
 
     return formatted_list
 
+def create_table_of_contents(formatted_list:list):
+    """ Generate table of contents forom list and returns new file contents """
+
+    with open("table_of_contents.txt", mode="w") as table_of_contents:
+        table_of_contents.write("TABLE OF CONTENTS\n")
+        table_of_contents.write("\n")
+        for line in formatted_list:
+            line_contents = " ".join(line)
+            table_of_contents.write(line_contents + "\n")
+
+    with open("table_of_contents.txt", mode="rt") as table_of_contents:
+        file_contents = table_of_contents.read()
+
+    return file_contents
+
