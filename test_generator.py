@@ -12,3 +12,18 @@ def test_open_csv():
     ]
 
     assert generator.open_csv("test_data/exports/markers.csv") == output
+
+# def extract_details():
+
+#     input_list = [
+#         ['Marker Name', 'Description', 'In', 'Out', 'Duration', 'Marker Type'],
+#         ['Section 1', 'Section 1 Description', '00:00:00:00', '00:00:00:00', '00:00:00:00', 'Chapter'],
+#         ['Section 2', 'Section 2 Description', '00:00:18:26', '00:00:18:26', '00:00:00:00', 'Chapter']
+#     ]
+
+#     output_list = [
+#         ['00:00:00:00', 'Section 1'],
+#         ['00:00:18:26', 'Section 2']
+#     ]
+
+#     assert generator.extract_details(input_list) == output_list
