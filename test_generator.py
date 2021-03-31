@@ -27,3 +27,16 @@ def test_extract_details():
     ]
 
     assert generator.extract_details(input_list) == output_list
+
+def test_format_time():
+    input_list = [
+        ['00:00:00:00', 'Section 1'],
+        ['00:00:18:26', 'Section 2']
+    ]
+
+    output_list = [
+        ['00:00:00', 'Section 1'],
+        ['00:00:18', 'Section 2']
+    ]
+
+    assert generator.format_time(input_list) == output_list
