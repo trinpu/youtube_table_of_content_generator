@@ -9,4 +9,8 @@ def open_csv(file_path:str):
     content_list = [line[:6] for line in content_list]       
     return content_list
 
+def extract_details(content_list:list):
+    """ Returns a list of details for table of contents"""
+    table_of_contents_list = [[line[2], line[0]] for line in content_list[1:]]
+    return table_of_contents_list
 
